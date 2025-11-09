@@ -12,5 +12,5 @@ Output
 7 objects imported automatically (use -v 2 for details).
 
 Total books: 1
-- 1: The Pragmatic Programmer by Andrew Hunt (1999)
+- 1: 1984 by George Orwell (1949)
 ```
