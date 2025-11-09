@@ -1,16 +1,13 @@
 # Delete Operation
 
 Command
-
 ```
-./venv/bin/python manage.py shell -c "from bookshelf.models import Book; deleted, _ = Book.objects.filter(id=1).delete(); print(f'Deleted rows: {deleted}'); print(f'Remaining count: {Book.objects.count()}')"
+./venv/bin/python manage.py shell -c "from bookshelf.models import Book; book = Book.objects.get(id=1); book.delete(); remaining_books = Book.objects.all(); print(f'Deletion confirmed. Remaining books: {remaining_books.count()}')"
 ```
 
 Output
-
 ```
 7 objects imported automatically (use -v 2 for details).
 
-Deleted rows: 1
-Remaining count: 0
+Deletion confirmed. Remaining books: 0
 ```

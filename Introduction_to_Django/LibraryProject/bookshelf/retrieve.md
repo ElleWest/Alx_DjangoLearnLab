@@ -3,7 +3,7 @@
 Command
 
 ```
-./venv/bin/python manage.py shell -c "from bookshelf.models import Book; books = Book.objects.all(); print(f'Total books: {books.count()}'); [print(f'- {book.id}: {book}') for book in books]"
+./venv/bin/python manage.py shell -c "from bookshelf.models import Book; book = Book.objects.get(id=1); print(f'Book: {book.title}, Author: {book.author}, Year: {book.publication_year}')"
 ```
 
 Output
@@ -11,6 +11,5 @@ Output
 ```
 7 objects imported automatically (use -v 2 for details).
 
-Total books: 1
-- 1: 1984 by George Orwell (1949)
+Book: 1984, Author: George Orwell, Year: 1949
 ```
